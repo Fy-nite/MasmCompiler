@@ -3,26 +3,14 @@
 
 #include <regex>
 typedef enum Opcode {
-// Basic
-    MOV = 0x01, ADD, SUB, MUL, DIV, INC,
-    JMP, CMP, JE, JL, CALL, RET,
-    PUSH, POP,
-    OUT, COUT, OUTSTR, OUTCHAR,
-    HLT, ARGC, GETARG,
-    DB,
-    LBL,
-    AND, OR, XOR, NOT, SHL, SHR,
-    MOVADDR, MOVTO,
-    JNE, JG, JLE, JGE,
-    ENTER, LEAVE,
-    COPY, FILL, CMP_MEM,
-    MNI,
-    IN,
-    MALLOC,
-    FREE,
-    MOVB,
-    SYSCALL,
-    INCLUDE = 0xF2, // Placeholder for include directive logic (handled pre-compilation)
+    MOV, ADD, SUB, MUL, DIV, INC, JMP,
+    CMP, JE, JL, CALL, RET, PUSH, POP,
+    OUT, COUT, OUTSTR, OUTCHAR, HLT,
+    ARGC, GETARG, DB, LBL, AND, OR,
+    XOR, NOT, SHL, SHR, MOVADDR, MOVTO,
+    JNE, JG, JLE, JGE, ENTER, LEAVE,
+    COPY, FILL, CMP_MEM, MNI, IN, 
+    MOVB, SYSCALL, INCLUDE
 } Opcode;
 
 typedef enum OperandType {
